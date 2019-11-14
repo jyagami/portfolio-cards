@@ -1,0 +1,95 @@
+:root {
+    /* fuentes */
+    --font-title: 'Didact Gothic', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    /* Color */
+    --color-dark: #333;
+}
+
+body {
+    margin: 0;
+    margin-top: -1em;
+    
+}
+p{
+    margin: 0;
+}
+
+.portfolio {
+    box-sizing: border-box;
+    text-align: center;
+    background-color: var(--color-dark);
+    width: 100%;
+    height: 100%;
+    padding: 5em 0;
+}
+
+.project {
+    box-sizing: border-box;
+    width: 25%;
+    margin: 2em;
+    display: inline-block;
+    box-shadow: 10px 10px  15px 10px rgba(0,0,0,.5);    
+}
+
+/* contenido de la tarjeta ------*/
+
+.portfolio .card-header {
+    background: var(--color-dark);
+    color: whitesmoke;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    transform: translateY(100px);
+    transition: all .5s ease-in-out;
+}
+
+.portfolio .card-body {
+    background: grey;
+    height: 200px;
+    transform: translateY(-100px);
+    transition: all .5s ease-in-out;
+    opacity: 0;
+}
+
+/* ----------------------------- */
+
+.project:hover .card-header{
+    transform: translateY(0);
+    background: whitesmoke;
+    color: var(--color-dark);
+}
+.project:hover .card-body{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* imagenes de los proyectos */
+.portfolio .p-1 {
+    background-image: url(img/galeria-1.png);
+    background-size: cover;
+
+}
+
+.portfolio .p-2 {
+    background-image: url(img/sistema1-1.png);
+    background-size: cover;
+}
+
+.project .title {
+    font-family: var(--font-title);
+    font-size: 1.5em;
+    padding: .5em 0 ;
+    /* color: var(--color-dark); */
+}
+
+.project .parrafo {
+    font-family: var(--font-body);
+    font-size: .8em;
+    padding: 0 1em;
+    text-align: left;
+    line-height: 1.8em;
+    
+    position: absolute;
+    /* color: var(--color-dark); */
+}
